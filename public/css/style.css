@@ -1,0 +1,134 @@
+body {
+    display: flex;
+    flex-direction: column;
+    min-height: 100vh;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+.container {
+    flex: 1;
+}
+
+.fa-globe {
+    color: rgb(15, 103, 210);
+    font-size: 2rem;
+}
+
+.nav-link {
+    color: #222222 !important;
+}
+
+.f-info-links a {
+    text-decoration: none;
+    color: #222222;
+}
+
+.f-info-links,
+.f-info-socials,
+.f-info-brands {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+.f-info-brands {
+    background-color: #c9c8c7;
+}
+
+.f-info-socials {
+    border: none;
+    border-top: 1px solid;
+    border-color: rgb(212, 212, 212);
+}
+
+.f-info-socials i {
+    margin-right: 1rem;
+    font-size: 1.5rem;
+    vertical-align: middle;
+    color: black !important;
+}
+
+.f-info {
+    text-align: center;
+    height: 6rem;
+    background-color: rgb(252, 252, 252);
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    align-items: space-evenly;
+}
+
+
+.listing-card {
+    margin-bottom: 3rem;
+    border: none !important;
+}
+
+.card-img-top {
+    border-radius: 1rem !important;
+    width: 100% !important;
+    object-fit: cover !important;
+
+}
+
+.listing-link {
+    text-decoration: none;
+}
+
+.card-img-overlay {
+    opacity: 0;
+}
+
+.card-img-overlay:hover {
+    opacity: 0.2;
+    background-color: white;
+}
+
+.show-img {
+    height: 55vh;
+}
+
+.btns {
+    display: flex;
+}
+
+#filter {
+    display: flex;
+    flex-wrap: wrap;
+
+}
+
+.filters {
+    margin-right: 2.3rem;
+    text-align: center;
+    opacity: 0.7;
+}
+
+.filters:hover {
+    opacity: 1;
+    cursor: pointer;
+}
+
+.btn-search {
+    background-color: red;
+    color: white;
+    border-radius: 25px;
+    padding: 0 1rem 0 1rem;
+}
+
+.btn-search:hover {
+    background-color: red;
+    color: white;
+}
+
+.btn-search i {
+    display: inline;
+    margin-right: 0.5rem;
+}
+
+.search-box {
+    border-radius: 25px;
+    padding: 0.5rem 3rem 0.5rem 3rem;
+}
