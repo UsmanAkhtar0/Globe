@@ -17,6 +17,12 @@ body {
 .nav-link {
     color: #222222 !important;
 }
+/* Hide 'Explore' link on mobile devices */
+@media (max-width: 767px) {
+    .explore-link {
+        display: none;
+    }
+}
 
 .f-info-links a {
     text-decoration: none;
@@ -30,12 +36,32 @@ body {
     display: flex;
     align-items: center;
     justify-content: center;
-
-}
-
-.f-info-brands {
     background-color: #c9c8c7;
+    padding: 10px; /* Add some padding to give space around the text */
+    font-size: 18px; /* Set a default font size */
 }
+
+.f-info-brands span {
+    margin-right: 5px; /* Add margin between the icon and the text */
+}
+
+/* Mobile responsiveness */
+@media (max-width: 768px) {
+    .f-info-brands {
+        font-size: 14px; /* Smaller font size for mobile */
+        padding: 8px; /* Reduce padding on smaller screens */
+    }
+}
+
+/* Further adjustments for very small screens (e.g., smartphones in portrait mode) */
+@media (max-width: 480px) {
+    .f-info-brands {
+        font-size: 12px; /* Even smaller font size */
+        padding: 6px; /* Reduce padding more */
+        text-align: center; /* Ensure the text is centered */
+    }
+}
+
 
 .f-info-socials {
     border: none;
@@ -72,6 +98,20 @@ body {
     object-fit: cover !important;
 
 }
+.show-img {
+    height: 55vh;
+}
+@media (max-width: 767px) {
+    .card-img-top {
+        height: auto; /* Allow the image to scale properly */
+    }
+
+    .show-img {
+        height: auto; /* Adjust image height for smaller screens */
+        max-height: 50vh; /* Limit the max height on small screens */
+    }
+}
+
 
 .listing-link {
     text-decoration: none;
@@ -86,9 +126,6 @@ body {
     background-color: white;
 }
 
-.show-img {
-    height: 55vh;
-}
 
 .btns {
     display: flex;
@@ -96,19 +133,57 @@ body {
 
 #filter {
     display: flex;
-    flex-wrap: wrap;
+    flex-wrap: nowrap; /* Ensure all filters stay in a row */
+    overflow-x: auto;  /* Enable horizontal scrolling */
+    gap: 1.5rem;       /* Add space between the icons */
+}
 
+#filter::-webkit-scrollbar {
+    display: none;
 }
 
 .filters {
-    margin-right: 2.3rem;
     text-align: center;
     opacity: 0.7;
+    display: inline-block; /* Align filters horizontally */
+    margin-left: 0.4rem;  
+    margin-right: 0.4rem;     
+    cursor: pointer;
 }
 
 .filters:hover {
     opacity: 1;
-    cursor: pointer;
+}
+
+.filters i {
+    font-size: 1.4rem; /* Size of the icons */
+}
+
+.filters p {
+    margin-top: 0.5rem;
+    font-size: 0.8rem;
+    color: #333; /* Color for the text */
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    #filter {
+        gap: 1rem;       /* Reduce gap between icons for smaller screens */
+        padding: 0 1rem; /* Add some padding to prevent icons from touching the edges */
+    }
+
+    .filters {
+        margin-left: 0.2rem;  
+        margin-right: 0.2rem;     
+    }
+
+    .filters i {
+        font-size: 1rem; /* Smaller icon size for mobile */
+    }
+
+    .filters p {
+        font-size: 0.6rem; /* Adjust text size for mobile */
+    }
 }
 
 .btn-search {
@@ -131,4 +206,24 @@ body {
 .search-box {
     border-radius: 25px;
     padding: 0.5rem 3rem 0.5rem 3rem;
+}
+
+
+/* Mobile responsiveness */
+@media (max-width: 767px) {
+    .search-form {
+        flex-direction: column;
+        align-items: stretch;
+        margin-top: 1.5rem;
+    }
+
+    .search-box {
+        width: 100%; /* Make the input full-width on small screens */
+        margin-bottom: 10px; /* Add some space between the input and button */
+    }
+
+    .btn-search {
+        width: 100%; /* Make the button full-width on small screens */
+        padding: 10px; /* Adjust padding for a better mobile feel */
+    }
 }

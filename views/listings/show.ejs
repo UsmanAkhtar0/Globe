@@ -1,7 +1,7 @@
 <% layout("/layouts/boilerplates") -%>
     <div class="row mt-4">
 
-        <div class="card listing-card col-8 offset-1">
+        <div class="card listing-card col-12 col-md-8 offset-md-1">
             <h3 class="card-title">
                 <%= listing.title %>
             </h3>
@@ -36,7 +36,7 @@
 
         </div>
 
-        <div class="col-8 offset-1 mb-3">
+        <div class="col-12 col-md-8 offset-md-1 mb-3">
             <% if(currUser) { %>
                 <hr>
                 <form method="post" action="/listings/<%= listing._id %>/reviews" class="needs-validation" novalidate>
@@ -72,9 +72,9 @@
                     <% if(listing.reviews && listing.reviews.length> 0) { %>
                         <hr>
                         <h4>All reviews:</h4>
-                        <div class="row ms-2">
+                        <div class="row ms-2 me-2">
                             <% for(review of listing.reviews) { %>
-                                <div class="card col-5  m-2">
+                                <div class="card col-12 col-md-5 m-2 ">
                                     <div class="card-body">
                                         <h5 class="card-title">@<%= review.author.username %>
                                         </h5>
