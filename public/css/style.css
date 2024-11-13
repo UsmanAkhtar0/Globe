@@ -149,6 +149,10 @@ body {
     margin-left: 0.4rem;  
     margin-right: 0.4rem;     
     cursor: pointer;
+    margin-bottom: 0px; /* Reduce space between filter items */
+}
+#line {
+    margin-top: 0px; /* Decrease space between hr and filter */
 }
 
 .filters:hover {
@@ -218,6 +222,7 @@ body {
     }
 
     .search-box {
+        padding: 0.5rem 3rem 0.5rem 8rem;
         width: 100%; /* Make the input full-width on small screens */
         margin-bottom: 10px; /* Add some space between the input and button */
     }
